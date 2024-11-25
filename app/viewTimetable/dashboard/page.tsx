@@ -7,7 +7,7 @@ const TimetableViewer: React.FC = () => {
   const [shift, setShift] = useState<string>("");
   const [filteredTimetable, setFilteredTimetable] = useState<any[]>([]);
 
-  const semesters = ["1st Semester", "2nd Semester", "3rd Semester", "4th Semester"];
+  const semesters = ["1st Semester", "2nd Semester", "3rd Semester", "4th Semester", "5th Semester", "6th Semester", "7th Semester", "8th Semester"];
   const departments = ["Computer Science", "Mechanical", "Electrical", "Civil"];
   const shifts = ["Morning", "Evening"];
 

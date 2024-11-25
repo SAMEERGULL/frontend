@@ -17,11 +17,11 @@ const AdminDashboard: React.FC = () => {
 
       {/* Main Content */}
       <div className="flex-1 flex flex-col">
-        <h1>
+        <h1 className="text-5xl font-bold m-10">
             Smart Timetable
         </h1>
         {view === 'dashboard' && (
-            <Dashboard />
+            <Dashboard setView={setView}/>
         )}
         {view === 'user' && (
             <UserManagement />

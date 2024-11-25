@@ -23,6 +23,7 @@ const EditTimetable: React.FC<{ timetableEntry: TimetableEntry; onSave: (updated
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     onSave(formData);
+    alert('Row Edited Succesfully')
   };
 
   return (

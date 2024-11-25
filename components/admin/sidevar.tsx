@@ -20,7 +20,7 @@ const Sidebar = ({setView}:any)=> {
         <li className="p-4 hover:bg-gray-700" onClick={()=>{setView('profile')}}>
           <button  >Profile</button>
         </li>
-        <li className="p-4 hover:bg-gray-700" onClick={()=>{window.location.href='/admin'}}>
+        <li className="p-4 hover:bg-gray-700" onClick={()=>{window.location.href='/'}}>
           <button >Logout</button>
         </li>
       </ul>

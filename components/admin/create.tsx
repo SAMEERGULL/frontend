@@ -24,6 +24,7 @@ const CreateTimetable: React.FC = ({onSave}:any) => {
     e.preventDefault();
     console.log("Timetable Entry Created:", formData);
     setFormData({ subject: "", classNumber: "", date: "", time: "", teacherName: "", department: "", shift: "", semester: ""});
+    alert('Row Added Successfully')
   };
 
   return (

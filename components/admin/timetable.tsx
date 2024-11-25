@@ -15,12 +15,37 @@ const TimetableList: React.FC = () => {
   const [selectedSemester, setSelectedSemester] = useState<string | null>(null);
   const [selectedDepartment, setSelectedDepartment] = useState<string | null>(null);
   const [selectedShift, setSelectedShift] = useState<string | null>(null);
-  const [timetables, setTimetables] = useState<TimetableEntry[]>([]);
+  const [timetables, setTimetables] = useState<TimetableEntry[]>([
+    {
+      id: "1",
+      subject: "Mathematics",
+      classNumber: "101",
+      date: "2024-11-25",
+      time: "10:00 AM - 12:00 PM",
+      teacherName: "Dr. John Doe",
+    },
+    {
+      id: "2",
+      subject: "Physics",
+      classNumber: "202",
+      date: "2024-11-26",
+      time: "02:00 PM - 04:00 PM",
+      teacherName: "Prof. Jane Smith",
+    },
+    {
+      id: "3",
+      subject: "Computer Science",
+      classNumber: "303",
+      date: "2024-11-27",
+      time: "11:00 AM - 01:00 PM",
+      teacherName: "Dr. Alice Brown",
+    },
+  ]);
   const [currentEntry, setCurrentEntry] = useState<TimetableEntry | null>(null);
   const [showCreatePopup, setShowCreatePopup] = useState(false);
   const [showEditPopup, setShowEditPopup] = useState(false);
 
-  const semesters = ["1st Semester", "2nd Semester", "3rd Semester"];
+  const semesters = ["1st Semester", "2nd Semester", "3rd Semester", "4th Semester", "5th Semester", "6th Semester", "7th Semester", "8th Semester"];
   const departments = ["Computer Science", "Mathematics", "Physics"];
   const shifts = ["Morning", "Evening"];
 
@@ -40,7 +65,7 @@ const TimetableList: React.FC = () => {
             <button
               key={semester}
               onClick={() => setSelectedSemester(semester)}
-              className={`px-4 py-2 rounded-lg ${
+              className={`px-2 py-2 rounded-lg ${
                 selectedSemester === semester ? "bg-blue-600 text-white" : "bg-gray-200"
               }`}
             >
@@ -90,8 +115,10 @@ const TimetableList: React.FC = () => {
         </div>
       )}
 
+      
+
       {/* Timetable Table */}
-      {selectedShift && (
+      
         <div>
           <button
             onClick={() => setShowCreatePopup(true)}
@@ -140,7 +167,7 @@ const TimetableList: React.FC = () => {
             </tbody>
           </table>
         </div>
-      )}
+      
 
       {/* Popups */}
       {showCreatePopup && (

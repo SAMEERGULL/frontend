@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 
 const ContactUs = () => {
@@ -71,6 +72,7 @@ const ContactUs = () => {
         <div>
           <button
             type="submit"
+            onClick={()=>{alert('Message sent.')}}
             className="w-full px-6 py-3 text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg"
           >
             Submit

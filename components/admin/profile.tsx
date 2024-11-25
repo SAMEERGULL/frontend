@@ -71,7 +71,7 @@ const Profile: React.FC = () => {
       <h2 className="text-2xl font-semibold mb-4">Admin Profile</h2>
       
       {!isEditing ? (
-        <div>
+        <div className='flex flex-col justify-center align-middle gap-2 mx-8'>
           <div className="mb-4">
             <strong>Name:</strong> {profile.name}
           </div>

@@ -4,6 +4,7 @@ import React from "react";
 const ViewTimetableLogin = () => {
   const habdleLogin = () => {
     window.location.href = '/viewTimetable/dashboard'
+    alert('Login Successfully')
   }
   return (
     <section className="flex items-center justify-center min-h-screen bg-gray-100">

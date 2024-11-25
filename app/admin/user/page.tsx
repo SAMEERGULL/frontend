@@ -27,12 +27,13 @@ const UserManagement: React.FC = () => {
     if (newUser.name && newUser.email) {
       setUsers([...users, { ...newUser, id: users.length + 1 }]);
       setNewUser({ id: 0, name: '', email: '', role: 'User' });
+      alert('User Created Successfully')
     }
   };
 
   const handleEditUser = (user: User) => {
     setEditingUser(user);
-    setNewUser(user); // Pre-fill the form with the selected user's data
+    setNewUser(user);
   };
 
   const handleUpdateUser = () => {
@@ -43,11 +44,13 @@ const UserManagement: React.FC = () => {
       setUsers(updatedUsers);
       setEditingUser(null);
       setNewUser({ id: 0, name: '', email: '', role: 'User' });
+      alert('User Edited Successfully')
     }
   };
 
   const handleDeleteUser = (id: number) => {
     setUsers(users.filter((user) => user.id !== id));
+    alert('User Deleted Successfully')
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>, field: keyof User) => {
@@ -62,7 +65,7 @@ const UserManagement: React.FC = () => {
       <h1 className="text-2xl font-bold mb-6">User Management</h1>
 
       {/* Add or Edit User Form */}
-      <div className="mb-6">
+      <div className="mb-6 flex flex-col align-middle justify-center">
         <h2 className="text-xl mb-4">{editingUser ? 'Edit User' : 'Add New User'}</h2>
         <input
           type="text"
